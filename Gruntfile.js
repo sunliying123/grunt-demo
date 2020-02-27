@@ -1,18 +1,18 @@
 module.exports=function(grunt){
     //less插件构建的配置信息
     grunt.initConfig({
-        htmlhint:{
+        csslint:{
             options:{
-                htmlhintrc:'./.htmlhintrc'
+                csslintrc:'./.csslintrc'
             },
-            src:['*.html']
+            src:['*.css']
         }
     });
 
     //加载插件
-    grunt.loadNpmTasks('grunt-htmlhint');
+    grunt.loadNpmTasks('grunt-csslint');
 
     //定义构建的任务清单
-    grunt.registerTask('default',['htmlhint']);
+    grunt.registerTask('default',['csslint']);
     
 }
