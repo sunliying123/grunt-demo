@@ -1,18 +1,19 @@
+/*global module:true */
 module.exports=function(grunt){
     //less插件构建的配置信息
     grunt.initConfig({
-        csslint:{
+        eslint:{
             options:{
-                csslintrc:'./.csslintrc'
+                csslintrc:'./.eslintrc.json'
             },
-            src:['*.css']
+            target:['*.js']
         }
     });
 
     //加载插件
-    grunt.loadNpmTasks('grunt-csslint');
+    grunt.loadNpmTasks('grunt-eslint');
 
     //定义构建的任务清单
-    grunt.registerTask('default',['csslint']);
+    grunt.registerTask('default',['eslint']);
     
 }
