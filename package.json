@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "grunt"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
-    "grunt": "^0.4.5",
-    "grunt-mocha": "^0.4.12"
+    "grunt": "^1.1.0",
+    "grunt-mocha-cli": "^6.0.0",
+    "grunt-run": "^0.8.1"
   }
 }
