@@ -2,22 +2,15 @@
 module.exports=function(grunt){
     //less插件构建的配置信息
     grunt.initConfig({
-        htmlmin:{
-            options:{
-                removeComments:true,
-                collapseWhitespace:true
-            },
-            files:{
-                src:'./index.html',  //原文件
-                dest:"dist/index.html" //压缩后文件目录
-            }
+        cssmin:{
+            'rectangle.min.css':'rectangle.css'
         }
     });
 
     //加载插件
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     //定义构建的任务清单
-    grunt.registerTask('default',['htmlmin']);
+    grunt.registerTask('default',['cssmin']);
     
 }
