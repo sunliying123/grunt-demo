@@ -2,15 +2,19 @@
 module.exports=function(grunt){
     //less插件构建的配置信息
     grunt.initConfig({
-        uglify:{
-            'rectangle.min.js':'rectangle.js'
+        imagemin:{
+            files:{
+                expand:true,
+                src:['images/*.(png,jpg,gif)'],
+                dest:'dist/'
+            }
         }
     });
 
     //加载插件
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     //定义构建的任务清单
-    grunt.registerTask('default',['uglify']);
+    grunt.registerTask('default',['imagemin']);
     
 }
