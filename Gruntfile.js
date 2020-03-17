@@ -2,15 +2,15 @@
 module.exports=function(grunt){
     //less插件构建的配置信息
     grunt.initConfig({
-        cssmin:{
-            'rectangle.min.css':'rectangle.css'
+        uglify:{
+            'rectangle.min.js':'rectangle.js'
         }
     });
 
     //加载插件
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     //定义构建的任务清单
-    grunt.registerTask('default',['cssmin']);
+    grunt.registerTask('default',['uglify']);
     
 }
