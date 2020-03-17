@@ -2,19 +2,18 @@
 module.exports=function(grunt){
     //less插件构建的配置信息
     grunt.initConfig({
-        imagemin:{
+        concat:{
             files:{
-                expand:true,
-                src:['images/*.(png,jpg,gif)'],
-                dest:'dist/'
+                src:['rectangle.js','calc.js'],
+                dest:'dist/bundle.js'
             }
         }
     });
 
     //加载插件
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     //定义构建的任务清单
-    grunt.registerTask('default',['imagemin']);
+    grunt.registerTask('default',['concat']);
     
 }
